@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  samba:
+    build: ./docker_samba
+    container_name: MySamba101
+    tty: true
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ./private:/shared/private
+      - ./public:/shared/public
+      - ./usr1:/shared/usr1
+      - ./usr2:/shared/usr2
+    restart: unless-stopped

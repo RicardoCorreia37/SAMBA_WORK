@@ -1,0 +1,13 @@
+FROM dperson/samba
+
+#RUN apt update && apt install -y samba
+
+COPY smb.conf /etc/samba/smb.conf
+
+#RUN mkdir -p /shared/private /shared/public /shared/usr1 /shared/usr2
+
+#EXPOSE 139
+#EXPOSE 445
+
+#CMD [ "smbd" , "--foreground", "--log-stdout" ]
+
